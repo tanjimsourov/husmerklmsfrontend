@@ -1,0 +1,18 @@
+.hostel{
+    padding: 1.5em;
+    border-radius: 8px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vacancy{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
