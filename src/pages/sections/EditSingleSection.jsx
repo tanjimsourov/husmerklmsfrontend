@@ -11,7 +11,7 @@ import useApi from '../../hooks/useApi'
 import { Header } from '../../components'
 import { LoadingButton } from '@mui/lab'
 
-const url = `https://api.ibnhaysam.com/api/v1/sections/`
+const url = `https://husmerklmsbackend.onrender.com/api/v1/sections/`
 
 function EditSingleSection() {
     
@@ -37,7 +37,7 @@ function EditSingleSection() {
                     "Authorization": authHeader,
                 }
 
-                const response = await axios.put(`https://api.ibnhaysam.com/api/v1/sections/section-update/${id}`, values, {headers: headers});
+                const response = await axios.put(`https://husmerklmsbackend.onrender.com/api/v1/sections/section-update/${id}`, values, {headers: headers});
 
                 console.log(response)
                 toast(response.data.message)

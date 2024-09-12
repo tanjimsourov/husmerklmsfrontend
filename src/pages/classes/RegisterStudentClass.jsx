@@ -9,7 +9,7 @@ import axios from 'axios';
 import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 import CircularProgress from '@mui/material/CircularProgress';
 
-const url = 'https://api.ibnhaysam.com/api/v1/classes/class-register'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/classes/class-register'
 
 function RegisterStudentClass() {
 

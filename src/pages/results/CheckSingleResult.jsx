@@ -14,7 +14,7 @@ import ClassSelection from '../../components/classSelection/ClassSelection'
 import useGetClasses from '../../hooks/useGetClasses'
 import { DataGrid } from '@mui/x-data-grid'
 
-const url = 'https://api.ibnhaysam.com/api/v1/results/get-results-by-classLevel-section-exam'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/results/get-results-by-classLevel-section-exam'
 
 function CheckSingleResult() {
 

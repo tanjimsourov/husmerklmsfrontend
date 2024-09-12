@@ -2,7 +2,7 @@ import { Backdrop, Card, CardContent, CircularProgress } from '@mui/material'
 import React from 'react'
 import useApi from '../../hooks/useApi'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial//student-feeCollectionByTypes'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial//student-feeCollectionByTypes'
 
 function GetReportByType() {
 

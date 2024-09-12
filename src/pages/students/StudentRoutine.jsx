@@ -31,7 +31,7 @@ function StudentRoutine({data}) {
                                         >
                                         {
                                             data?.routine &&
-                                            <img style={{width: '100%', aspectRatio: '1/1', objectFit: 'contain'}} src={`https://api.ibnhaysam.com/api/v1/uploads/${data?.routine}`} alt="" />
+                                            <img style={{width: '100%', aspectRatio: '1/1', objectFit: 'contain'}} src={`https://husmerklmsbackend.onrender.com/api/v1/uploads/${data?.routine}`} alt="" />
                                         }
                                         </Box>
                                     </CardContent>
@@ -46,7 +46,7 @@ function StudentRoutine({data}) {
                                 <div onClick={handleOpen} className="float">
                                     <GoZoomIn />
                                 </div>
-                                <img style={{width: '100%', aspectRatio: '1/1', objectFit: 'contain'}} src={`https://api.ibnhaysam.com/api/v1/uploads/${data?.routine}`} alt="" />
+                                <img style={{width: '100%', aspectRatio: '1/1', objectFit: 'contain'}} src={`https://husmerklmsbackend.onrender.com/api/v1/uploads/${data?.routine}`} alt="" />
 
                             
 

@@ -5,7 +5,7 @@ import { Header } from '../../components'
 import useApi from '../../hooks/useApi'
 import { useParams } from 'react-router-dom'
 
-const url = 'https://api.ibnhaysam.com/api/v1/exams/get-exam'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/exams/get-exam'
 
 function ViewExam() {
 

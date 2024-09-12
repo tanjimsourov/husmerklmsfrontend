@@ -11,7 +11,7 @@ import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 import DataTable from '../../components/datatable/DataTable'
 
-const url = `https://api.ibnhaysam.com/api/v1/expense/expense-range`
+const url = `https://husmerklmsbackend.onrender.com/api/v1/expense/expense-range`
 
 const MonthlyExpense = () => {
 

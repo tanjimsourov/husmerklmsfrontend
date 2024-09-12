@@ -5,7 +5,7 @@ import { Button, Card, CardContent } from '@mui/material';
 import { Header } from '../../components';
 import { BsPencilSquare } from 'react-icons/bs';
 
-const url = 'https://api.ibnhaysam.com/api/v1/subjects/get-subject';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/subjects/get-subject';
 
 function SingleCourse() {
     const {id} = useParams()

@@ -5,7 +5,7 @@ import useApi from '../../hooks/useApi'
 import { Link } from 'react-router-dom'
 import { RiSecurePaymentFill } from 'react-icons/ri'
 
-const url = 'http://localhost:2020/api/v1/financial/get-users-for-salary'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/financial/get-users-for-salary'
 
 const Pay = () => {
 

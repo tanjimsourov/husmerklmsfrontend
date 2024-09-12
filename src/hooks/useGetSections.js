@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 
-const url = 'https://api.ibnhaysam.com/api/v1/sections/';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/sections/';
 
 const useGetSections = () => {
     const authHeader = useAuthHeader();

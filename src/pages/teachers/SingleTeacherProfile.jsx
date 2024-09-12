@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { FaPencil } from 'react-icons/fa6'
 import dayjs from 'dayjs';
 
-const url = 'https://api.ibnhaysam.com/api/v1/teachers/get-teacher/';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/teachers/get-teacher/';
 
 function SingleTeacherProfile() {
 
@@ -34,7 +34,7 @@ function SingleTeacherProfile() {
 
                                 <Stack spacing={2}>
                                     <div className="teacher-profile-wrapper">
-                                        <img src={data.profile ? `https://api.ibnhaysam.com/api/v1/uploads/${data.profile}` : ""} alt="" />
+                                        <img src={data.profile ? `https://husmerklmsbackend.onrender.com/api/v1/uploads/${data.profile}` : ""} alt="" />
                                     </div>
                                     <h2 className="teacher-name">{data.name}</h2>
                                     <p className="teacher-phone">{data.phone}</p>

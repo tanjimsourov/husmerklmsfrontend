@@ -10,7 +10,7 @@ import useApi from '../../hooks/useApi';
 import { useParams } from 'react-router-dom';
 import { Header } from '../../components';
 
-const url = 'https://api.ibnhaysam.com/api/v1/subjects'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/subjects'
 
 function SingleCourseEdit() {
 
@@ -46,7 +46,7 @@ function SingleCourseEdit() {
                 const headers = {
                     "Authorization": authHeader,
                 }
-                const response = await axios.put('https://api.ibnhaysam.com/api/v1/subjects/subject-register', values, {headers: headers});
+                const response = await axios.put('https://husmerklmsbackend.onrender.com/api/v1/subjects/subject-register', values, {headers: headers});
                 toast.success(response.data.message)
                 console.log(response.data)
 

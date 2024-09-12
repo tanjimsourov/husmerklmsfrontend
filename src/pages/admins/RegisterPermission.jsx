@@ -6,7 +6,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader'
 import { ToastContainer, toast } from 'react-toastify'
 import * as Yup from 'yup'
 
-const url = 'https://api.ibnhaysam.com/api/v1/admin-permission/add-permission'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/admin-permission/add-permission'
 
 function RegisterPermission() {
 

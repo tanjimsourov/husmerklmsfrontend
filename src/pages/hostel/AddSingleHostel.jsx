@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader'
 import axios from 'axios'
 
-const url = 'https://api.ibnhaysam.com/api/v1/hostels/hostel-register'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/hostels/hostel-register'
 
 function AddSingleHostel() {
 

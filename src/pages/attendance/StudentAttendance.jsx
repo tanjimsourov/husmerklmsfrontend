@@ -49,7 +49,7 @@ function StudentAttendance() {
                     "Authorization": authHeader,
                 }
 
-                const response = await axios.get(`https://api.ibnhaysam.com/api/v1/classes/${formik.values.classLevel}`, {headers: headers})
+                const response = await axios.get(`https://husmerklmsbackend.onrender.com/api/v1/classes/${formik.values.classLevel}`, {headers: headers})
                 //console.log(response.data.data.students)
                 setStudents(response.data.data.students)
 

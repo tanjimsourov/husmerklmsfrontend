@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import dayjs from 'dayjs'
 import { GrView } from 'react-icons/gr'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-feeCollectionByStudent'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-feeCollectionByStudent'
 
 function GetFee() {
 

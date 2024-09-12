@@ -27,7 +27,7 @@ function RegisterAcademicYear() {
             "Authorization": authHeader
         }
         try {
-            const response = await axios.post('https://ibnhaysam.com/api/v1/academic-year/register', {
+            const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/academic-year/register', {
                 name: academicYearName,
                 fromYear: fromYear,
                 toYear: toYear

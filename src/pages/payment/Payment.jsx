@@ -13,7 +13,7 @@ import StudentListSelection from '../../components/studentListSelection/StudentL
 import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/add-student-financial';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/add-student-financial';
 const desiredUrl = 'payment/transactions'
 function Payment({data, year}) {
     const authHeader = useAuthHeader()

@@ -14,7 +14,7 @@ import axios from 'axios';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { CheckCircleOutline } from '@mui/icons-material';
 
-const url = 'https://api.ibnhaysam.com/api/v1/teachers/teacher-register';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/teachers/teacher-register';
 
 function AddTeacher() {
     const authHeader = useAuthHeader()
@@ -127,7 +127,7 @@ function AddTeacher() {
                                                 width: '100%'
                                             }}
                                             alt='profile'
-                                            src={ photoURL ? photoURL : `https://api.ibnhaysam.com/api/v1/uploads/${formik.values.profile}`}
+                                            src={ photoURL ? photoURL : `https://husmerklmsbackend.onrender.com/api/v1/uploads/${formik.values.profile}`}
                                         />
                                         // <FaRegCircleUser />
                                         

@@ -4,7 +4,7 @@ import { CardContent } from '@mui/material';
 import useApi from '../../hooks/useApi';
 import DataTable from '../../components/datatable/DataTable';
 
-const url = 'https://api.ibnhaysam.com/api/v1/sections/get-sections';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/sections/get-sections';
 
 function Sections() {
     const { data, isLoading, error } = useApi(url);

@@ -6,7 +6,7 @@ import { DataGrid } from '@mui/x-data-grid'
 import { Header } from '../../components'
 import DataTable from '../../components/datatable/DataTable'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-report/payment'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-report/payment'
 
 function IncomeReport() {
 

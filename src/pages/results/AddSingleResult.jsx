@@ -13,7 +13,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import axios from 'axios'
 import { Header } from '../../components'
 
-const url = 'https://api.ibnhaysam.com/api/v1/results/result-register'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/results/result-register'
 
 function AddSingleResult() {
 

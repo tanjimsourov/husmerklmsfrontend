@@ -15,7 +15,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const url = 'https://api.ibnhaysam.com/api/v1/user/get-user'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/user/get-user'
 
 function EditSingleEmployee() {
 
@@ -46,7 +46,7 @@ function EditSingleEmployee() {
                 "Authorization": authHeader
             }
 
-            const response = await axios.put(`https://api.ibnhaysam.com/api/v1/user/update-user/${id}`, values, {headers: headers});
+            const response = await axios.put(`https://husmerklmsbackend.onrender.com/api/v1/user/update-user/${id}`, values, {headers: headers});
 
             console.log('Registration successful:', response.data);
             toast(response.data.success)

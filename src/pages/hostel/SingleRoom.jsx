@@ -4,7 +4,7 @@ import DataTable from '../../components/datatable/DataTable';
 import { useNavigate, useParams } from 'react-router-dom';
 import useApi from '../../hooks/useApi';
 
-const url = 'https://api.ibnhaysam.com/api/v1/rooms/get-room';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/rooms/get-room';
 
 function SingleRoom() {
 

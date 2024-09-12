@@ -16,7 +16,7 @@ function SingleSalaryTemplate() {
 
     const authHeader = useAuthHeader()
     const [loading, setLoading] = useState(false)
-    const {data: teachers, isLoading, error} = useApi('https://api.ibnhaysam.com/api/v1/financial/get-users-for-salary/')
+    const {data: teachers, isLoading, error} = useApi('https://husmerklmsbackend.onrender.com/api/v1/financial/get-users-for-salary/')
 
     const formik = useFormik({
         initialValues:{

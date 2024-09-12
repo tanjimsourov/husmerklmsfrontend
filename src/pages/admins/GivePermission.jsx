@@ -7,7 +7,7 @@ import axios from 'axios'
 import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader'
 import { ToastContainer, toast } from 'react-toastify'
 
-const url = "https://api.ibnhaysam.com/api/v1/admin-permission/change-router-permission"
+const url = "https://husmerklmsbackend.onrender.com/api/v1/admin-permission/change-router-permission"
 
 function GivePermission() {
 

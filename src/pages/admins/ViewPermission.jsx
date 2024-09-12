@@ -4,7 +4,7 @@ import { DataGrid } from '@mui/x-data-grid'
 import { Backdrop, Card, CardContent, CircularProgress } from '@mui/material'
 import { Header } from '../../components'
 
-const url = 'https://api.ibnhaysam.com/api/v1/admin-permission/'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/admin-permission/'
 
 function ViewPermission() {
 

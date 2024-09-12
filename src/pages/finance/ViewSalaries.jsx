@@ -4,7 +4,7 @@ import DataTable from '../../components/datatable/DataTable'
 import Card from '@mui/material/Card';
 import { CardContent } from '@mui/material';
 
-const url = 'https://api.ibnhaysam.com/api/v1/financial/get-salary-details'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/financial/get-salary-details'
 
 function ViewSalaries() {
 

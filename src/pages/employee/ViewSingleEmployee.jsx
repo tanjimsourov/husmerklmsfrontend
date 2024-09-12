@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Header } from '../../components'
 import { BsPencilSquare } from 'react-icons/bs'
 
-const url = 'https://api.ibnhaysam.com/api/v1/user/get-user'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/user/get-user'
 
 function ViewSingleEmployee() {
 

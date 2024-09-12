@@ -15,7 +15,7 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import dayjs from 'dayjs'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-addFeeDistribution'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-addFeeDistribution'
 
 function PaymentFor() {
 

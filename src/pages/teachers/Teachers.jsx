@@ -5,7 +5,7 @@ import Card from '@mui/material/Card'
 import { CardContent } from '@mui/material'
 import useApi from '../../hooks/useApi';
 
-const url = 'https://api.ibnhaysam.com/api/v1/teachers/get-teachers';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/teachers/get-teachers';
 
 function Teachers() {
 

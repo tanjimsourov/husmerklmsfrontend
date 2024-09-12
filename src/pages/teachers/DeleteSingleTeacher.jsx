@@ -21,7 +21,7 @@ function DeleteSingleTeacher() {
             };
     
             const response = await axios.delete(
-              `https://api.ibnhaysam.com/api/v1/teachers/teacher-delete/${id}`,
+              `https://husmerklmsbackend.onrender.com/api/v1/teachers/teacher-delete/${id}`,
               { headers }
             );
             console.log(response.data);

@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import Print from '../../components/Print'
 import Logo from '../../assets/imgs/ibn haysam invoice header.png'
 
-const url = 'https://api.ibnhaysam.com/api/v1/financial/getSingleSalaryDetails'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/financial/getSingleSalaryDetails'
 
 const ViewSingleIncomeReport = () => {
 

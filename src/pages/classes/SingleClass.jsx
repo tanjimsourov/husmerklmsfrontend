@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import {BsPencilSquare} from 'react-icons/bs'
 import { Backdrop, Card, CardContent, CircularProgress, Stack, Table, TableBody, TableCell, TableContainer, TableHead, Button, TableRow, TextField } from '@mui/material'
 
-const url = "https://api.ibnhaysam.com/api/v1/classes/class/"
+const url = "https://husmerklmsbackend.onrender.com/api/v1/classes/class/"
 
 function SingleClass() {
     const {id} = useParams('id')

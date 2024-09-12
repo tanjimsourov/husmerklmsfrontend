@@ -1,7 +1,7 @@
 import React from 'react'
 import DeleteSingleEntry from '../../components/DeleteSingleEntry'
 
-const url = `https://api.ibnhaysam.com/api/v1/expense/expenses/`
+const url = `https://husmerklmsbackend.onrender.com/api/v1/expense/expenses/`
 
 const DeleteSingleExpense = () => {
   return (

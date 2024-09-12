@@ -7,7 +7,7 @@ import InvoiceHeader from '../../assets/imgs/ibn haysam invoice header.png'
 import dayjs from 'dayjs'
 import Print from '../../components/Print'
 
-const url = `https://api.ibnhaysam.com/api/v1/expense/expenses`
+const url = `https://husmerklmsbackend.onrender.com/api/v1/expense/expenses`
 
 const ViewSingleExpense = () => {
 

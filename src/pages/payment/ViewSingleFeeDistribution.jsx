@@ -8,7 +8,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader'
 import useApi from '../../hooks/useApi'
 import { ToastContainer, toast } from 'react-toastify'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-feeDistributionByYear'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-feeDistributionByYear'
 
 function ViewSingleFeeDistribution() {
 
@@ -66,7 +66,7 @@ function ViewSingleFeeDistribution() {
                     'Content-Type': 'application/json', // Use application/json for JSON data
                 };
         
-                const response = await axios.put(`https://api.ibnhaysam.com/api/v1/studentFinancial/student-feeDistribution/update/${id}`, formData, { headers: headers });
+                const response = await axios.put(`https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-feeDistribution/update/${id}`, formData, { headers: headers });
         
                 console.log("Response: ", response);
         

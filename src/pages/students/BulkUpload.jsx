@@ -37,7 +37,7 @@ function BulkUpload() {
           'Content-Type': 'multipart/form-data',
         }
 
-        const response = await axios.post('https://api.ibnhaysam.com/api/v1/students/student-import', values, {headers: headers});
+        const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/students/student-import', values, {headers: headers});
 
         console.log('Registration successful:', response.data);
         toast(response.data.message)

@@ -3,7 +3,7 @@ import useApi from '../../hooks/useApi'
 import { Backdrop, Card, CardContent, CircularProgress } from '@mui/material'
 import DataTable from '../../components/datatable/DataTable'
 
-const url = 'http://localhost:2020/api/v1/users/users-with-role-user'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/users/users-with-role-user'
 
 const ViewUsers = () => {
 

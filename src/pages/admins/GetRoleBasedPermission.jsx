@@ -8,7 +8,7 @@ import * as Yup from 'yup'
 import { Header } from '../../components'
 import { DataGrid } from '@mui/x-data-grid'
 
-const url = "https://api.ibnhaysam.com/api/v1/admin-permission/get-router-permission"
+const url = "https://husmerklmsbackend.onrender.com/api/v1/admin-permission/get-router-permission"
 
 function GetRoleBasedPermission() {
 

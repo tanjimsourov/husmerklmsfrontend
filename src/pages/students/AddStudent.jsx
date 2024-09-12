@@ -21,7 +21,7 @@ import dayjs from 'dayjs';
 import { CloudUpload } from '@mui/icons-material';
 import useApi from '../../hooks/useApi';
 
-const url = 'https://api.ibnhaysam.com/api/v1/classes/get-class';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/classes/get-class';
 
 function AddStudent() {
     const authHeader = useAuthHeader()
@@ -92,7 +92,7 @@ function AddStudent() {
 
                 console.log('values: ', values)
                 
-                const response = await axios.post('https://api.ibnhaysam.com/api/v1/students//student-register', values, {headers: headers});
+                const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/students//student-register', values, {headers: headers});
 
                 toast.success(response.data.message)
 
@@ -150,7 +150,7 @@ function AddStudent() {
                                                 width: '100%'
                                             }}
                                             alt='profile'
-                                            src={ photoURL ? photoURL : `https://api.ibnhaysam.com/api/v1/uploads/${formik.values.profile}`}
+                                            src={ photoURL ? photoURL : `https://husmerklmsbackend.onrender.com/api/v1/uploads/${formik.values.profile}`}
                                         />
                                         // <FaRegCircleUser />
                                         

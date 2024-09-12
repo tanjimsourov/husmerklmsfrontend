@@ -24,7 +24,7 @@ import useApi from '../../hooks/useApi';
 import { useParams } from 'react-router-dom';
 import { CloudUpload } from '@mui/icons-material';
 
-const url = 'https://api.ibnhaysam.com/api/v1/students/get-student'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/students/get-student'
 
 function EditSingleStudent() {
 
@@ -101,7 +101,7 @@ function EditSingleStudent() {
                     'Content-Type': 'multipart/form-data',
                 }
                 
-                const response = await axios.put(`https://api.ibnhaysam.com/api/v1/students/student-update/${id}`, values, {headers: headers});
+                const response = await axios.put(`https://husmerklmsbackend.onrender.com/api/v1/students/student-update/${id}`, values, {headers: headers});
 
                 console.log('Registration successful:', response.data);
                 toast(response.data.message)
@@ -188,7 +188,7 @@ function EditSingleStudent() {
                                             background: '#f4f4f4'
                                         }}
                                         alt={'profile picture'}
-                                        src={ photoURL ? photoURL : `https://api.ibnhaysam.com/api/v1/uploads/${formik.values.profile}`}
+                                        src={ photoURL ? photoURL : `https://husmerklmsbackend.onrender.com/api/v1/uploads/${formik.values.profile}`}
                                     />
                                 )
                             }

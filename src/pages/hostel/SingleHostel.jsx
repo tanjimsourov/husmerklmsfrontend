@@ -11,7 +11,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 import { ToastContainer, toast } from 'react-toastify';
 import useRooms from '../../hooks/useRooms';
 
-const url = 'https://api.ibnhaysam.com/api/v1/rooms/hostel-register';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/rooms/hostel-register';
 
 function SingleHostel() {
 

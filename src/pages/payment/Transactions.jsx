@@ -6,7 +6,7 @@ import DataTable from '../../components/datatable/DataTable';
 import { Card, CardContent } from '@mui/material';
 import dayjs from 'dayjs';
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/get-student-financial'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/get-student-financial'
 
 function Transactions() {
 

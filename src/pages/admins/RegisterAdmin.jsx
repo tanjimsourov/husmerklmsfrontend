@@ -28,7 +28,7 @@ function RegisterAdmin() {
 
             console.log(headers)
             // https://ibnhaysam.com/api/v1/admins/register
-            const response = await axios.post('https://api.ibnhaysam.com/api/v1/users/register', formData, {
+            const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/users/register', formData, {
                 headers: headers
             });
             console.log('Registration successful:', response.data);

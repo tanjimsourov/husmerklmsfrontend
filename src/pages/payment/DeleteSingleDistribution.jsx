@@ -2,7 +2,7 @@ import React from 'react'
 import DeleteSingleItem from '../../components/deleteItem/DeleteSingleItem'
 import { useParams } from 'react-router-dom'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-fee-collection/delete/:id'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-fee-collection/delete/:id'
 
 function DeleteSingleDistribution() {
 

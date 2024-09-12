@@ -4,7 +4,7 @@ import { Backdrop, Card, CardContent, CircularProgress } from '@mui/material'
 import DataTable from '../../components/datatable/DataTable'
 import dayjs from 'dayjs'
 
-const url = `https://api.ibnhaysam.com/api/v1/expense/expenses`
+const url = `https://husmerklmsbackend.onrender.com/api/v1/expense/expenses`
 
 const ViewExpenses = () => {
     const {data, isLoading, error} = useApi(url)

@@ -3,7 +3,7 @@ import useApi from '../../hooks/useApi';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 
-const url = 'https://api.ibnhaysam.com/api/v1/get-routes';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/get-routes';
 
 function EndPoints() {
     const {data, isLoading, error } = useApi(url)

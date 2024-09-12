@@ -5,7 +5,7 @@ import { Header } from '../../components';
 import useApi from '../../hooks/useApi';
 import dayjs from 'dayjs';
 
-const url = 'https://api.ibnhaysam.com/api/v1/users/get-only-editors'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/users/get-only-editors'
 
 function Employees() {
 

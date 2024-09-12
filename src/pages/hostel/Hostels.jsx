@@ -4,7 +4,7 @@ import { Backdrop, Card, CardContent, CircularProgress } from '@mui/material'
 import { Header } from '../../components'
 import useApi from '../../hooks/useApi'
 
-const url = 'https://api.ibnhaysam.com/api/v1/hostels/get-hostels'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/hostels/get-hostels'
 
 function Hostels() {
 

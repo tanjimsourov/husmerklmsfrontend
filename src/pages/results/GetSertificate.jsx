@@ -9,7 +9,7 @@ import useApi from '../../hooks/useApi';
 import axios from 'axios';
 import bg from '../../assets/imgs/certificate_bg.jpeg'
 
-const url = 'https://api.ibnhaysam.com/api/v1/students/get-students';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/students/get-students';
 
 function GetSertificate() {
 
@@ -38,7 +38,7 @@ function GetSertificate() {
 
                 // console.log(values);
 
-                const response = await axios.post('https://api.ibnhaysam.com/api/v1/results/get-results-by-student-exam', values, { headers: headers });
+                const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/results/get-results-by-student-exam', values, { headers: headers });
 
                 // console.log(response.data.data);
 

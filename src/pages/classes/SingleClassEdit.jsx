@@ -8,13 +8,13 @@ import { ToastContainer, toast } from 'react-toastify'
 import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 import axios from 'axios';
 
-const url = "https://api.ibnhaysam.com/api/v1/classes/"
+const url = "https://husmerklmsbackend.onrender.com/api/v1/classes/"
 
 function SingleClassEdit() {
     const {id} = useParams('id')
     const {data, isLoading, error} = useApi(`${url}${id}`) 
     const authHeader = useAuthHeader()
-    const {data: teachers, isLoading: isTeacherLoading, error: isTeacherError} = useApi('https://api.ibnhaysam.com/api/v1/teachers/')
+    const {data: teachers, isLoading: isTeacherLoading, error: isTeacherError} = useApi('https://husmerklmsbackend.onrender.com/api/v1/teachers/')
     const [loading, setLoading] = useState(false)
 
     const formik = useFormik({
@@ -35,7 +35,7 @@ function SingleClassEdit() {
                     "Authorization": authHeader
                 }
 
-                const response = await axios.put(`https://api.ibnhaysam.com/api/v1/classes/class-update/${id}`, values, {headers: headers})
+                const response = await axios.put(`https://husmerklmsbackend.onrender.com/api/v1/classes/class-update/${id}`, values, {headers: headers})
 
                 console.log("Class Updated", response.data)
                 toast(response.data.message)

@@ -12,7 +12,7 @@ import useAssignedStudentId from '../../components/assignStudent/AssignedStudent
 import { IoCloseCircle } from "react-icons/io5";
 import StudentListSelection from '../../components/studentListSelection/StudentListSelection'
 
-const url = 'https://api.ibnhaysam.com/api/v1/students';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/students';
 
 function EditSingleRoom() {
 
@@ -49,7 +49,7 @@ function EditSingleRoom() {
                 const studentId = values.assignedStudent;
                 const updatedValue = {roomId, seatId, studentId}
 
-                const response = await axios.post('https://api.ibnhaysam.com/api/v1/rooms/assign', updatedValue , {headers: headers});
+                const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/rooms/assign', updatedValue , {headers: headers});
 
                 console.log(response)
                 toast(response.data.message)  
@@ -89,7 +89,7 @@ function EditSingleRoom() {
             setLoading(true)
             const updatedValue = {roomId, seatId}
 
-            const response = await axios.post('https://api.ibnhaysam.com/api/v1/rooms/room-unassign', updatedValue , {headers: headers});
+            const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/rooms/room-unassign', updatedValue , {headers: headers});
 
             console.log(response)
             toast(response.data.message)

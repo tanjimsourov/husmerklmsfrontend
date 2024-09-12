@@ -13,7 +13,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import dayjs from 'dayjs';
 import Payment from './Payment';
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-feeDistributionByYearClass'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-feeDistributionByYearClass'
 
 function SelectPayment() {
     const {classLists, isLoading, error} = useGetClasses();

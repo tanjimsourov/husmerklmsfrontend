@@ -4,7 +4,7 @@ import DataTable from '../../components/datatable/DataTable'
 import { Header } from '../../components'
 import useApi from '../../hooks/useApi'
 
-const url = 'https://api.ibnhaysam.com/api/v1/exams/get-exams'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/exams/get-exams'
 
 function ViewExam() {
 

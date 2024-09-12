@@ -31,7 +31,7 @@ function IdCard(props) {
                                     <img src={IdCardLogo} alt="" />
                                 </div>
                                 <div className="id-card-profile">
-                                    <img src={`https://api.ibnhaysam.com/api/v1/uploads/${props.data.profile}`} alt="" />
+                                    <img src={`https://husmerklmsbackend.onrender.com/api/v1/uploads/${props.data.profile}`} alt="" />
                                 </div>
                                 <div className="id-card-info">
                                     <div className="id-card-info-title">

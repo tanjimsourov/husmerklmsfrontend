@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import useApi from '../../hooks/useApi'
 import DataTable from '../../components/datatable/DataTable'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-feeDistributionByYear'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-feeDistributionByYear'
 
 function ViewFeeDistribution() {
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 
-const url = 'https://api.ibnhaysam.com/api/v1/students/get-students';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/students/get-students';
 
 function useGetStudents() {
     const authHeader = useAuthHeader();

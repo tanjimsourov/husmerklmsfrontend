@@ -10,7 +10,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader'
 import { ToastContainer, toast } from 'react-toastify'
 import * as Yup from 'yup'
 
-const url = 'http://localhost:2020/api/v1/financial/generate-salary-sheet'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/financial/generate-salary-sheet'
 
 const GenerateSalarySheet = () => {
 

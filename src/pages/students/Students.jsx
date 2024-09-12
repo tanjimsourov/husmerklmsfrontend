@@ -5,7 +5,7 @@ import Card from '@mui/material/Card';
 import { CardContent, CircularProgress } from '@mui/material';
 import useApi from '../../hooks/useApi';
 
-const url = 'https://api.ibnhaysam.com/api/v1/students/get-students';
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/students/get-students';
 
 function Students() {
   const { data, isLoading, error } = useApi(url);

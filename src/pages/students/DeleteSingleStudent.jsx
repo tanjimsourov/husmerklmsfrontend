@@ -1,7 +1,7 @@
 import React from 'react'
 import DeleteSingleItem from '../../components/deleteItem/DeleteSingleItem'
 
-const url = 'https://api.ibnhaysam.com/api/v1/students/student-delete'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/students/student-delete'
 
 function DeleteSingleStudent() {
   return (

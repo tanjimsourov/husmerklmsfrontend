@@ -22,7 +22,7 @@ function attributes(index){
   })
 }
 
-const url = 'https://api.ibnhaysam.com/api/v1/students/get-student'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/students/get-student'
 
 function SingleStudent() {
 
@@ -62,7 +62,7 @@ function SingleStudent() {
                       <div className="row">
                         <div className="col-12 flex flex-direction-column align-items-center">
                             <div className="profile">
-                              <Avatar src={`https://api.ibnhaysam.com/api/v1/uploads/${data.profile}`} alt="Mobashira" sx={{width: 100, height: 100}} />
+                              <Avatar src={`https://husmerklmsbackend.onrender.com/api/v1/uploads/${data.profile}`} alt="Mobashira" sx={{width: 100, height: 100}} />
                             </div>
                             <div className="profile-info">
                                 <div className="profile-info-group flex flex-direction-column justify-content-center align-items-center">

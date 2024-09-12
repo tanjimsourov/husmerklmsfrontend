@@ -5,7 +5,7 @@ import { Backdrop, Card, CardContent, CircularProgress, Stack } from '@mui/mater
 import dayjs from 'dayjs'
 import Print from '../../components/Print'
 
-const url = 'https://api.ibnhaysam.com/api/v1/studentFinancial/student-feeCollectionById'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/student-feeCollectionById'
 
 function ViewSingleTransaction() {
 

@@ -6,7 +6,7 @@ import useApi from '../../hooks/useApi'
 import DataTable from '../../components/datatable/DataTable'
 import { BsPencilSquare } from 'react-icons/bs'
 
-const url = 'https://api.ibnhaysam.com/api/v1/sections/get-section'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/sections/get-section'
 
 function ViewSingleSection() {
 

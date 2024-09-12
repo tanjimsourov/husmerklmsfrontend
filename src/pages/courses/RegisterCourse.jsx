@@ -45,7 +45,7 @@ function RegisterCourse() {
                 const headers = {
                     "Authorization": authHeader,
                 }
-                const response = await axios.post('https://api.ibnhaysam.com/api/v1/subjects/subject-register', values, {headers: headers});
+                const response = await axios.post('https://husmerklmsbackend.onrender.com/api/v1/subjects/subject-register', values, {headers: headers});
                 toast.success(response.data.message)
                 console.log(response.data)
                 resetForm();

@@ -5,7 +5,7 @@ import AttendanceChip from '../../components/AttendanceChip';
 import { useParams } from 'react-router-dom';
 import useApi from '../../hooks/useApi';
 
-const url = 'https://api.ibnhaysam.com/api/v1/attendance/get-attendance'
+const url = 'https://husmerklmsbackend.onrender.com/api/v1/attendance/get-attendance'
 
 function SingleAttendance({rows}) {
 

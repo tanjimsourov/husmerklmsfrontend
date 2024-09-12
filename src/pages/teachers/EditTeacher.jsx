@@ -18,7 +18,7 @@ import axios from 'axios';
 
 const EditTeacher = () => {
     const { id } = useParams('id');
-    const url = useMemo(() => `https://api.ibnhaysam.com/api/v1/teachers/get-teacher/${id}`, [id]);
+    const url = useMemo(() => `https://husmerklmsbackend.onrender.com/api/v1/teachers/get-teacher/${id}`, [id]);
     const { data, isLoading, error } = useApi(`${url}`);
     const [loading, setLoading] = useState(false)
     const [photoURL, setPhotoURL] = useState();
@@ -61,7 +61,7 @@ const EditTeacher = () => {
                     'Content-Type': 'multipart/form-data',
                 }
                 
-                const response = await axios.put(`https://api.ibnhaysam.com/api/v1/teachers/teacher-update/${id}`, values, {headers: headers});
+                const response = await axios.put(`https://husmerklmsbackend.onrender.com/api/v1/teachers/teacher-update/${id}`, values, {headers: headers});
 
                 console.log(`${url}/update/${id}`)
 
@@ -141,7 +141,7 @@ const EditTeacher = () => {
                                                                 background: '#f4f4f4'
                                                             }}
                                                             alt={'profile picture'}
-                                                            src={ photoURL ? photoURL : `https://api.ibnhaysam.com/api/v1/uploads/${formik.values.profile}`}
+                                                            src={ photoURL ? photoURL : `https://husmerklmsbackend.onrender.com/api/v1/uploads/${formik.values.profile}`}
                                                         />
                                                         
                                                     }
