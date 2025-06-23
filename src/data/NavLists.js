@@ -1,388 +1,385 @@
 import { PiStudentFill, PiStudentBold } from 'react-icons/pi';
 import { IoIosAddCircle } from 'react-icons/io';
-import { FaChalkboardTeacher, FaCalendar, FaLayerGroup, FaHotel, FaBus, FaPen, FaCloudUploadAlt } from 'react-icons/fa';
+import { FaChalkboardTeacher, FaCalendar, FaLayerGroup, FaHotel, FaBus, FaPen, FaUpload } from 'react-icons/fa';
 import { CiViewList } from 'react-icons/ci';
 import { FaChalkboardUser, FaUserTie } from "react-icons/fa6";
-import { GrMoney } from "react-icons/gr";
-import { IoBookSharp } from 'react-icons/io5'
-import {MdAdminPanelSettings, MdOutlinePayments} from 'react-icons/md'
-import { SlCalender } from 'react-icons/sl'
-import { RiSurveyFill } from "react-icons/ri";
-import { MdEventAvailable } from "react-icons/md";
-import { GrSchedule } from "react-icons/gr";
-import { HiDocumentReport } from "react-icons/hi"
+import { BsCurrencyExchange, BsGraphUp } from "react-icons/bs";
+import { IoBookSharp } from 'react-icons/io5';
+import { MdAdminPanelSettings, MdOutlinePayments, MdEventAvailable } from 'react-icons/md';
+import { SlCalender } from 'react-icons/sl';
+import { RiSurveyFill, RiAdminFill } from "react-icons/ri";
+import { GrSchedule, GrMoney } from "react-icons/gr";
+import { HiDocumentReport, HiOutlineDocumentReport } from "react-icons/hi";
+import { FiUsers, FiUserPlus } from "react-icons/fi";
+import { AiOutlineSchedule, AiFillMoneyCollect } from "react-icons/ai";
 
 const NavLists = [
     {
         displayTitle: "Students",
-        icon: <PiStudentFill />,
+        icon: <PiStudentFill size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Students",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: 'students'
             },
             {
                 title: "Add Student",
-                icon: <IoIosAddCircle />,
+                icon: <FiUserPlus size={16} />,
                 path: 'students/add'
             },
             {
                 title: "Bulk Upload",
-                icon: <FaCloudUploadAlt />,
+                icon: <FaUpload size={16} />,
                 path: 'students/upload'
             }
-            
         ]
     },
     {
         displayTitle: "Teachers",
-        icon: <FaChalkboardTeacher />,
+        icon: <FaChalkboardTeacher size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Teachers",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: 'teachers'
             },
             {
                 title: "Add Teacher",
-                icon: <IoIosAddCircle />,
+                icon: <FiUserPlus size={16} />,
                 path: 'teachers/add'
             }
         ]
     },
     {
         displayTitle: "Staff",
-        icon: <FaUserTie />,
+        icon: <FaUserTie size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Staffs",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: 'staffs'
             },
             {
                 title: "View Users",
-                icon: <CiViewList />,
+                icon: <FiUsers size={16} />,
                 path: 'staffs/users'
             },
             {
                 title: "Add Staff",
-                icon: <IoIosAddCircle />,
+                icon: <FiUserPlus size={16} />,
                 path: 'staffs/add'
             }
         ]
     },
     {
         displayTitle: "Employee",
-        icon: <FaUserTie />,
+        icon: <FaUserTie size={18} />,
         role: 'admin',
         children: [
             {
                 title: "View Employees",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: 'employees'
             },
             {
                 title: "Add Employees",
-                icon: <IoIosAddCircle />,
+                icon: <FiUserPlus size={16} />,
                 path: 'employees/add'
             }
         ]
     },
     {
         displayTitle: 'Attendance',
-        icon: <CiViewList />,
+        icon: <MdEventAvailable size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "Student Attendance",
-                icon: <PiStudentBold />,
+                icon: <PiStudentBold size={16} />,
                 path: 's_attendance'
             }
         ]
     },
     {
         displayTitle: "Exams",
-        icon: <FaPen />,
+        icon: <FaPen size={18} />,
         role: 'sub-admin',
         children: [
-            
-            {
-                title: "Add Exam",
-                icon: <IoIosAddCircle />,
-                path: 'exams/add'
-            },
             {
                 title: "View Exams",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path:"exams"
+            },
+            {
+                title: "Add Exam",
+                icon: <IoIosAddCircle size={16} />,
+                path: 'exams/add'
             }
         ]
     },
     {
         displayTitle: "Payment",
-        icon: <MdOutlinePayments />,
+        icon: <AiFillMoneyCollect size={18} />,
         role: "editor",
         children: [
             {
                 title: "View Transactions",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: "payment/transactions"
             },
             {
                 title: "Make Payments",
-                icon: <MdOutlinePayments />,
+                icon: <MdOutlinePayments size={16} />,
                 path: "payment/pay"
             },
             {
                 title: "Payment Distribution",
-                icon: <MdOutlinePayments />,
+                icon: <BsGraphUp size={16} />,
                 path: 'payment'
             },
             {
                 title: "Distribution Details",
-                icon: <MdOutlinePayments />,
+                icon: <BsGraphUp size={16} />,
                 path: 'payment/details'
             }
         ]
     },
     {
         displayTitle: "Finance",
-        icon: <GrMoney />,
+        icon: <BsCurrencyExchange size={18} />,
         role: 'editor',
         children: [
             {
                 title: 'View Salary',
-                icon: <GrMoney />,
+                icon: <GrMoney size={16} />,
                 path: "register-salary"
             },
             {
                 title: "Add Salary",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'register-salary/add'
             },
             {
                 title: "Add Expense",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: "register-salary/add-expense"
             },
             {
                 title: "View Expenses",
-                icon: <GrMoney />,
+                icon: <HiOutlineDocumentReport size={16} />,
                 path: "register-salary/view-expenses"
             },
             {
                 title: "Generate Salary Sheet",
-                icon: <GrMoney />,
+                icon: <HiDocumentReport size={16} />,
                 path: 'register-salary/generate-salary-sheet'
             },
             {
                 title: "Pay Now",
-                icon: <GrMoney />,
+                icon: <MdOutlinePayments size={16} />,
                 path: 'register-salary/pay'
             }
         ]
     },
     {
-        displayTitle: "Get Report",
-        icon: <HiDocumentReport />,
+        displayTitle: "Reports",
+        icon: <HiDocumentReport size={18} />,
         role: 'editor',
         children: [
             {
                 title: "Payment Reports",
-                icon: <HiDocumentReport />,
+                icon: <HiOutlineDocumentReport size={16} />,
                 path: 'report'
             },
             {
                 title: "Monthly Expense",
-                icon: <HiDocumentReport />,
+                icon: <HiOutlineDocumentReport size={16} />,
                 path: "report/monthly-expense"
             },
             {
                 title: "Monthly Salary",
-                icon: <HiDocumentReport />,
+                icon: <HiOutlineDocumentReport size={16} />,
                 path: "report/monthly-salary"
             }
         ]
     },
     {
         displayTitle: "Classes",
-        icon: <FaChalkboardUser />,
+        icon: <FaChalkboardUser size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Class",
-                icon: <FaChalkboardUser />,
+                icon: <FaChalkboardUser size={16} />,
                 path: "classes"
             },
             {
                 title: "Add Class",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'classes/add'
             }
         ]
     },
     {
         displayTitle: "Sections",
-        icon: <FaLayerGroup />,
+        icon: <FaLayerGroup size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Section",
-                icon: <FaLayerGroup />,
+                icon: <FaLayerGroup size={16} />,
                 path: 'sections'
             },
             {
                 title: "Add Section",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'sections/add'
             }
         ]
     },
     {
         displayTitle: "Subjects",
-        icon: <IoBookSharp />,
+        icon: <IoBookSharp size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Subjects",
-                icon: <IoBookSharp />,
+                icon: <IoBookSharp size={16} />,
                 path: 'subjects'
             },
             {
                 title: "Add Subject",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'subjects/add'
             }
         ]
     },
     {
         displayTitle: "Results",
-        icon: <RiSurveyFill />,
+        icon: <RiSurveyFill size={18} />,
         role: 'teacher',
         children: [
             {
                 title: "Add Result",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'results/add'
             },
             {
                 title: "Check Result",
-                icon: <RiSurveyFill />,
+                icon: <RiSurveyFill size={16} />,
                 path: 'results/check'
             },
             {
                 title: "Get Certificate",
-                icon: <RiSurveyFill />,
+                icon: <RiSurveyFill size={16} />,
                 path: 'results/certificate'
             }
         ]
-
     },
     {
         displayTitle: 'Routine',
-        icon: <SlCalender />,
+        icon: <AiOutlineSchedule size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "Add Routine",
-                icon: <SlCalender />,
+                icon: <SlCalender size={16} />,
                 path: 'routines'
             }
         ]
     },
     {
         displayTitle: 'Hostel',
-        icon: <FaHotel />,
+        icon: <FaHotel size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Hostels",
-                icon: <FaHotel />,
+                icon: <FaHotel size={16} />,
                 path: 'hostels'
             },
             {
                 title: "Add Hostel",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'hostels/add'
             }
         ]
     },
     {
         displayTitle: "Transport",
-        icon: <FaBus />,
+        icon: <FaBus size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Routes",
-                icon: <FaBus />,
+                icon: <FaBus size={16} />,
                 path: 'transports'
             },
             {
                 title: "Add Route",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'transports/add'
             },
             {
                 title: "Add Vehicle",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'transports/vehicle/add'
             }
         ]
     },
     {
         displayTitle: 'Academic Years',
-        icon: <FaCalendar />,
+        icon: <FaCalendar size={18} />,
         role: 'sub-admin',
         children: [
             {
                 title: "View Years",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: 'academic-years'
             },
             {
                 title: "Add Year",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'academic-years/add'
             },
         ]
     },
     {
         displayTitle: "Admin",
-        icon: <MdAdminPanelSettings />,
+        icon: <RiAdminFill size={18} />,
         role: 'admin',
         children: [
             {
                 title: "View End Points",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: 'admins/endpoints'
             },
             {
                 title: "View Admins",
-                icon: <CiViewList />,
+                icon: <CiViewList size={16} />,
                 path: 'admins'
             },
             {
                 title: 'View Permission',
-                icon: <CiViewList />,
+                icon: <MdAdminPanelSettings size={16} />,
                 path: 'admins/permissions'
             },
             {
                 title: "Give Permission to Role",
-                icon: <IoIosAddCircle />,
+                icon: <IoIosAddCircle size={16} />,
                 path: 'admins/permissions/give-permission'
             },
             {
                 title: "Get Role Based Permission",
-                icon: <IoIosAddCircle />,
+                icon: <MdAdminPanelSettings size={16} />,
                 path: 'admins/permissions/get-permission'
             }
-            
         ]
     }
-]
+];
 
 export default NavLists;
