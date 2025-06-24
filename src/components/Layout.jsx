@@ -11,6 +11,7 @@ import useAuthStore from '../store/authStore';
 import { motion } from 'framer-motion';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+
 // Custom theme for consistent styling
 const theme = createTheme({
   palette: {
@@ -27,11 +28,18 @@ const theme = createTheme({
 });
 
 function Layout() {
-  const { user, logout } = useAuthStore();
+  const { user, logout, token } = useAuthStore();
   const navigate = useNavigate();
   const { activeMenu, setActiveMenu, screenSize, setScreenSize } = useStateContext();
   const [anchorEl, setAnchorEl] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
+
+    // Authentication check
+  useEffect(() => {
+    if (!token) {
+      navigate('/');
+    }
+  }, [token, navigate]);
 
   const handleClick = () => {
     setActiveMenu(prevState => !prevState);
@@ -70,7 +78,7 @@ function Layout() {
 
   const handleLogOut = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   return (

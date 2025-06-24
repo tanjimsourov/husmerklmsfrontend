@@ -79,7 +79,7 @@ function Login() {
   
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/');
+      navigate('/dashboard');
     }
   }, [isAuthenticated, navigate]);
 
@@ -108,7 +108,7 @@ function Login() {
         if (response.data) {
           await login(response.data); // Ensure login completes before navigation
           toast.success("Login successful");
-          navigate('/'); // Explicit navigation after successful login
+          navigate('/dashboard'); // Explicit navigation after successful login
         } else {
           toast.error("Invalid response from server");
         }

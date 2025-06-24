@@ -1,6 +1,6 @@
-import { Card, CardContent, Stack, Box } from '@mui/material';
+import { Card, CardContent, Stack, Box, Skeleton } from '@mui/material';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { PiStudentBold } from 'react-icons/pi';
 import useGetStudents from '../../hooks/useGetStudents';
 import useApi from '../../hooks/useApi';
@@ -8,7 +8,8 @@ import { FaChalkboardTeacher } from 'react-icons/fa';
 import { MdMoney, MdMoneyOff } from 'react-icons/md';
 import MaleFemaleStudentRation from '../../components/MaleFemaleStudentRation';
 import CustomBarChart from '../../components/CustomBarChart';
-import { Skeleton } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import useAuthStore from '../../store/authStore';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -47,14 +48,14 @@ const chartVariants = {
 
 const StatCard = ({ icon, title, value, isLoading, color }) => {
   return (
-    <Box sx={{ 
+    <Box sx={{
       width: '100%',
       height: '100%',
       padding: { xs: '0.25rem', sm: '0.5rem' },
       boxSizing: 'border-box'
     }}>
       <motion.div variants={cardVariants} style={{ height: '100%' }}>
-        <Card sx={{ 
+        <Card sx={{
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
@@ -66,14 +67,14 @@ const StatCard = ({ icon, title, value, isLoading, color }) => {
             boxShadow: '0 8px 20px rgba(0,0,0,0.12)'
           }
         }}>
-          <CardContent sx={{ 
+          <CardContent sx={{
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
-            padding: { xs: '0.75rem', sm: '1rem' } 
+            padding: { xs: '0.75rem', sm: '1rem' }
           }}>
-            <Box sx={{ 
-              display: 'flex', 
+            <Box sx={{
+              display: 'flex',
               alignItems: 'center',
               flex: 1
             }}>
@@ -95,8 +96,8 @@ const StatCard = ({ icon, title, value, isLoading, color }) => {
                 {icon}
               </motion.div>
               <Box sx={{ minWidth: 0 }}>
-                <Box component="h3" sx={{ 
-                  color: '#666', 
+                <Box component="h3" sx={{
+                  color: '#666',
                   marginBottom: '4px',
                   fontSize: '0.875rem',
                   fontWeight: 500,
@@ -109,9 +110,9 @@ const StatCard = ({ icon, title, value, isLoading, color }) => {
                 {isLoading ? (
                   <Skeleton variant="text" width={60} height={32} />
                 ) : (
-                  <motion.div 
-                    style={{ 
-                      margin: 0, 
+                  <motion.div
+                    style={{
+                      margin: 0,
                       fontSize: '1.5rem',
                       fontWeight: 700,
                       color: '#333',
@@ -139,32 +140,53 @@ function Dashboard() {
   const { data, isLoading: isApiLoading, error: isApiError } = useApi('https://husmerklmsbackend.onrender.com/api/v1/teachers/get-teachers');
   const { data: totalExpense, isLoading: expenseLoading, error: expenseError } = useApi('https://husmerklmsbackend.onrender.com/api/v1/expense/monthly-total-expense');
   const { data: totalIncome, isLoading: incomeLoading, error: incomeError } = useApi('https://husmerklmsbackend.onrender.com/api/v1/studentFinancial/totalFeeCollectionCurrentMonth');
+  const { token } = useAuthStore();
+  const navigate = useNavigate();
+
+  // Authentication check
+  useEffect(() => {
+    if (!token) {
+      navigate('/');
+    }
+  }, [token, navigate]);
+
+  if (!token) {
+    return null;
+  }
 
   return (
-    <Box sx={{ 
+    <Box sx={{
       width: '100%',
       height: '100%',
-      overflow: 'hidden',
-      padding: { xs: '0.5rem', sm: '1rem' },
+      overflow: { xs: 'auto', sm: 'hidden' },
+      padding: { xs: '0.25rem', sm: '1rem' },
       boxSizing: 'border-box'
     }}>
       <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        style={{ height: '100%' }}
+        style={{ 
+          height: '100%',
+          minHeight: { xs: 'min-content', sm: '100%' }
+        }}
       >
-        <Stack spacing={2} sx={{ height: '100%' }}>
+        <Stack spacing={{ xs: 1, sm: 2 }} sx={{ 
+          height: { sm: '100%' },
+          minHeight: { xs: 'min-content', sm: 'auto' }
+        }}>
+          {/* Stats Cards */}
           <Box sx={{
             width: '100%',
             height: { xs: 'auto', sm: '22%' },
+            minHeight: { xs: 'auto', sm: '22%' },
             display: 'grid',
-            gridTemplateColumns: { 
-              xs: '1fr', 
-              sm: 'repeat(2, 1fr)', 
-              md: 'repeat(4, 1fr)' 
+            gridTemplateColumns: {
+              xs: '1fr',
+              sm: 'repeat(2, 1fr)',
+              md: 'repeat(4, 1fr)'
             },
-            gap: { xs: '0.75rem', sm: '1rem' }
+            gap: { xs: '0.5rem', sm: '1rem' }
           }}>
             <StatCard
               icon={<PiStudentBold />}
@@ -196,41 +218,95 @@ function Dashboard() {
             />
           </Box>
 
+          {/* Charts Section */}
           <Box sx={{
-            flex: 1,
+            flex: { sm: 1 },
             width: '100%',
             display: 'grid',
-            gridTemplateColumns: { 
-              xs: '1fr', 
-              sm: 'repeat(2, 1fr)' 
+            gridTemplateColumns: {
+              xs: '1fr',
+              sm: 'repeat(2, 1fr)'
             },
-            gap: { xs: '0.75rem', sm: '1rem' },
-            minHeight: 0
+            gap: { xs: '1rem', sm: '1rem' },
+            minHeight: { xs: '600px', sm: 0 },
+            mb: { xs: 2, sm: 0 }
           }}>
-            <motion.div variants={chartVariants} style={{ height: '100%' }}>
+            {/* Male/Female Ratio Chart */}
+            <motion.div
+              variants={chartVariants}
+              style={{
+                height: { xs: '300px', sm: '100%' },
+                minHeight: '300px',
+                width: '100%'
+              }}
+            >
               <Card sx={{ 
                 height: '100%',
+                width: '100%',
                 borderRadius: '12px',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                overflow: 'hidden'
               }}>
-                <CardContent sx={{ flex: 1, minHeight: 0 }}>
-                  <MaleFemaleStudentRation />
+                <CardContent sx={{ 
+                  flex: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  minHeight: 0,
+                  padding: { xs: '8px', sm: '16px' },
+                  '&:last-child': {
+                    paddingBottom: { xs: '8px', sm: '16px' }
+                  }
+                }}>
+                  <Box sx={{ 
+                    flex: 1,
+                    minHeight: '250px',
+                    width: '100%',
+                    position: 'relative'
+                  }}>
+                    <MaleFemaleStudentRation />
+                  </Box>
                 </CardContent>
               </Card>
             </motion.div>
-            
-            <motion.div variants={chartVariants} style={{ height: '100%' }}>
+
+            {/* Custom Bar Chart */}
+            <motion.div
+              variants={chartVariants}
+              style={{
+                height: { xs: '300px', sm: '100%' },
+                minHeight: '300px',
+                width: '100%'
+              }}
+            >
               <Card sx={{ 
                 height: '100%',
+                width: '100%',
                 borderRadius: '12px',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                overflow: 'hidden'
               }}>
-                <CardContent sx={{ flex: 1, minHeight: 0 }}>
-                  <CustomBarChart />
+                <CardContent sx={{ 
+                  flex: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  minHeight: 0,
+                  padding: { xs: '8px', sm: '16px' },
+                  '&:last-child': {
+                    paddingBottom: { xs: '8px', sm: '16px' }
+                  }
+                }}>
+                  <Box sx={{ 
+                    flex: 1,
+                    minHeight: '250px',
+                    width: '100%',
+                    position: 'relative'
+                  }}>
+                    <CustomBarChart />
+                  </Box>
                 </CardContent>
               </Card>
             </motion.div>
